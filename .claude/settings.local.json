@@ -8,7 +8,11 @@
       "Bash(git branch:*)",
       "Bash(git push:*)",
       "Bash(git pull:*)",
-      "Bash(python -m http.server:*)"
+      "Bash(python -m http.server:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill /F /PID 16280)",
+      "Bash(taskkill /F /PID 2900)"
     ],
     "deny": [],
     "ask": []

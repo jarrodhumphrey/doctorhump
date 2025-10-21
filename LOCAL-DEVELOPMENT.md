@@ -103,6 +103,26 @@ netstat -ano | findstr :8000
 
 ## Troubleshooting
 
+### "ERR_EMPTY_RESPONSE" or Browser Can't Connect
+
+If http://localhost:8000 shows "ERR_EMPTY_RESPONSE" or "didn't send any data", multiple server processes may be running on port 8000.
+
+**Solution:**
+1. Check what's using port 8000:
+```bash
+netstat -ano | findstr :8000
+```
+
+2. Kill any processes (replace XXXX with the PID numbers shown):
+```bash
+taskkill //F //PID XXXX
+```
+
+3. Start the server fresh:
+```bash
+python -m http.server 8000
+```
+
 ### "Address already in use" Error
 
 The server is already running on port 8000.
@@ -111,7 +131,16 @@ The server is already running on port 8000.
 - Look for the terminal window where it's running
 - Press `Ctrl+C`
 
-**Solution 2:** Use a different port
+**Solution 2:** Kill the process manually
+```bash
+# Check what's using port 8000
+netstat -ano | findstr :8000
+
+# Kill the process (replace XXXX with the PID)
+taskkill //F //PID XXXX
+```
+
+**Solution 3:** Use a different port
 ```bash
 python -m http.server 8001
 # Then visit http://localhost:8001
