@@ -6,12 +6,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #CC0000;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #00FF00;
 }
 
 .container {
