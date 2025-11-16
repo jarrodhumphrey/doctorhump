@@ -6,17 +6,85 @@
 
 ---
 
-## SURVEY OVERVIEW - INCREDIBLE RESULTS
+## SURVEY OVERVIEW - AGGREGATED CLAIMS
 
-### Combined Statistics Across All AI Talks:
+### Big Claims (Website-Ready Headlines):
 
-| Metric | Result |
-|--------|--------|
-| **Net Promoter Score (NPS)** | 100% (XLC AI Talk - Fall 2024) |
-| **Average Rating** | 9.8/10 (XLC AI in Business - Fall 2024) |
-| **Response Rate** | 90% (XLC AI in Business - Fall 2024) |
-| **Promoter Score** | 77.27% (XLC AI Talk 2) |
-| **Word of Mouth Likelihood** | 9.27/10 (XLC AI Talk 2) |
+| Claim | Source(s) |
+|-------|-----------|
+| **100% Net Promoter Score** | XLC AI in Business (Sedler Talk), Fall 2024 |
+| **9.8/10 Average Rating** | XLC AI in Business (Sedler Talk), Fall 2024 |
+| **100% Engagement Rating** | XLC AI Talk 1, February 2025 (71% "Extremely" + 29% "Very") |
+| **96% Will Implement AI Tools** | XLC AI Talk 1, February 2025 |
+| **9.27/10 Word of Mouth Score** | XLC AI Talk 2 |
+| **90% Survey Response Rate** | XLC AI in Business (Sedler Talk), Fall 2024 |
+
+### Individual Survey Results (Supporting Data):
+
+| Survey | Date | Participants | Key Metrics |
+|--------|------|--------------|-------------|
+| **XLC AI in Business (Sedler)** | Oct 2024 | 90% response rate | NPS: 100%, Avg: 9.8/10 |
+| **XLC AI Talk 1** | Feb 2025 | 24 responses | Engagement: 100%, Clarity: 96%, Will Implement: 96% |
+| **XLC AI Talk 2** | Recent | 22 responses | NPS: 9.27/10, Promoters: 77.27%, Facilitator: 100% positive |
+| **XLC AI Talk 3** | Oct 2024 | Limited data | Summary only |
+
+---
+
+## HOW BIG CLAIMS WERE CALCULATED
+
+### Claim: "100% Net Promoter Score"
+**Source:** XLC AI in Business (Sedler Talk), Fall 2024
+**Raw Data:** From email summary by Xavier Leadership Center
+- Survey result stated: "Net Promoter Score: 100%"
+- No calculation needed - direct from official XLC survey report
+
+### Claim: "9.8/10 Average Rating"
+**Source:** XLC AI in Business (Sedler Talk), Fall 2024
+**Raw Data:** From email summary by Xavier Leadership Center
+- Survey result stated: "Average rating out of 10: 9.8"
+- Response rate: 90%
+- No calculation needed - direct from official XLC survey report
+
+### Claim: "100% Engagement Rating"
+**Source:** XLC AI Talk 1, February 2025
+**Raw Data Breakdown:**
+- Question: "How engaging did you find the presentation?"
+- Extremely engaging: 17 responses (71%)
+- Very engaging: 7 responses (29%)
+- Moderately engaging: 0 responses (0%)
+- Slightly engaging: 0 responses (0%)
+- Not at all engaging: 0 responses (0%)
+- **Calculation:** 71% + 29% = 100% rated "Very" or "Extremely" engaging
+- Total responses: 24
+
+### Claim: "96% Will Implement AI Tools"
+**Source:** XLC AI Talk 1, February 2025
+**Raw Data Breakdown:**
+- Question: "How likely are you to explore further or implement the AI tools and techniques discussed?"
+- Extremely likely: 17 responses (71%)
+- Very likely: 6 responses (25%)
+- Moderately likely: 1 response (4%)
+- Slightly likely: 0 responses (0%)
+- Not at all likely: 0 responses (0%)
+- **Calculation:** 71% + 25% = 96% rated "Very likely" or "Extremely likely"
+- Total responses: 24
+
+### Claim: "9.27/10 Word of Mouth Score"
+**Source:** XLC AI Talk 2
+**Raw Data:**
+- Question: "How likely are you to spread positive word of mouth about this XLC program to a friend or colleague?"
+- Score displayed on survey: 9.27 (on 0-10 scale)
+- Promoter score: 77.27%
+- Passive score: 22.73%
+- Detractor score: 0%
+- No calculation needed - direct from survey visualization
+
+### Claim: "90% Survey Response Rate"
+**Source:** XLC AI in Business (Sedler Talk), Fall 2024
+**Raw Data:** From email summary by Xavier Leadership Center
+- Email stated: "Response Rate: 90%"
+- This indicates 90% of session attendees completed the survey
+- No calculation needed - direct from official XLC report
 
 ---
 
