@@ -12,7 +12,13 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(taskkill /F /PID 16280)",
-      "Bash(taskkill /F /PID 2900)"
+      "Bash(taskkill /F /PID 2900)",
+      "Bash(nslookup:*)",
+      "Bash(curl:*)",
+      "Bash(dir:*)",
+      "Bash(mkdir:*)",
+      "Bash(git rm:*)",
+      "Bash(python combine_testimonials.py:*)"
     ],
     "deny": [],
     "ask": []

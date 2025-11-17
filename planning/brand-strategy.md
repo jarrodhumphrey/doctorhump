@@ -61,7 +61,61 @@ The website should integrate all three pillars seamlessly, showcasing:
 
 ---
 
+## Website Planning Resources
+
+### Planning Documents Created:
+1. **[website-planning-questions.md](website-planning-questions.md)** - 53 strategic questions to clarify vision
+2. **[website-answers.md](website-answers.md)** - Your answers to guide development
+3. **[testimonials-strategy.md](testimonials-strategy.md)** - How to use 54 testimonials effectively
+
+### Content Resources:
+- **Testimonials:** [Feedback/MASTER-TESTIMONIALS.txt](../Feedback/MASTER-TESTIMONIALS.txt) - 54 curated items
+- **Feedback Inventory:** [Feedback/inventory.md](../Feedback/inventory.md) - Source documentation
+
+---
+
+## Development Workflow
+
+### Phase 1: Discovery (Current)
+- [ ] Answer website planning questions
+- [ ] Define testimonials placement strategy
+- [ ] Gather existing content (photos, bio, videos)
+- [ ] Review competitor/inspiration websites
+
+### Phase 2: Strategy
+- [ ] Create site map and page structure
+- [ ] Content outline for each page
+- [ ] Design direction and style guide
+- [ ] Technical architecture decisions
+
+### Phase 3: Design
+- [ ] Wireframes for key pages
+- [ ] Visual design mockups
+- [ ] Component library
+- [ ] Responsive breakpoints
+
+### Phase 4: Development
+- [ ] Set up repository and deployment
+- [ ] Build homepage
+- [ ] Build pillar pages (AI, Case Race, Personal)
+- [ ] Testimonials integration
+- [ ] Contact/CTA functionality
+
+### Phase 5: Launch
+- [ ] Content population
+- [ ] SEO optimization
+- [ ] Analytics setup
+- [ ] Testing and QA
+- [ ] Go live
+
+---
+
 ## Status
 **Created:** 2025-11-15
-**Current Phase:** Planning and strategy definition
-**Next Steps:** Define specific content, design direction, and implementation roadmap
+**Updated:** 2025-11-16
+**Current Phase:** Discovery - Planning questions ready
+**Next Steps:**
+1. Answer questions in [website-answers.md](website-answers.md)
+2. Review and decide on testimonials strategy
+3. Gather content assets (photos, videos, existing copy)
+4. Move to Strategy phase once discovery is complete

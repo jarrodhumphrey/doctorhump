@@ -1,0 +1,121 @@
+# Master Testimonials - Bare Bones
+
+## SCREENSHOTS
+
+1. "I just want you to know that you are officially my favorite professor at XU." — Xavier Student, Fall 2025
+
+2. "I have been successfully using claude code for the past three days, vibe coding and training agents for a specific service to aid nonprofits. I'm happy to report that I have successfully created three AI agents." — Xavier Student, Fall 2025
+
+3. "You did a kick ass job with your presentation and a wealth of info my friend." — Xavier Faculty Member, Fall 2025
+
+4. "Thank you for leading a great XLC session. I thought the content was spot-on, and your energy and engaging delivery style really made a difference." — Xavier Alumnus, XLC Session
+
+5. "I recently attended a similar session at UC. While I did enjoy that session, I am happy to report as a proud Xavier alum that I would rate your class more highly 😊." — Xavier Alumnus, XLC Session
+
+## SINGLE EMAILS
+
+6. "Thank you again, Jarrod, for all that you are doing in this space. If I was a faculty member right now, it is work I would want to engage in!" — Xavier University President, May 2024
+
+7. "Professor Humphrey did a wonderful job bringing that into the classroom. I'm super appreciative of that and how he was able to create a classroom environment that really sparks creativity and innovation." — Xavier Student (Marketing & Entrepreneurship major), 2024
+
+8. Students built first-of-its-kind generative AI tool for ethical academic use — D'Artagnan Project
+
+9. "The topic is super cool, but more importantly you teach it with great expertise and passion. I would suspect that you are very well liked by the students that you have the opportunity to share the classroom with." — Bill Moran, Xavier Staff, October 2025
+
+## MULTI-PAGE REFLECTIONS
+
+10. "I appreciate your time and the resources you shared as am compiling our AI in Career Development Project. Your insights and knowledge of AI and its nuances are extremely helpful. I look forward to working with you more on this topic." — Xavier Career Development Director, July 2025
+
+11. Academic research paper: "I like the bots but my employer doesn't! An examination of AI status incongruence" — Study of 243 working adults from variety of industries
+
+12. "Yesterday's event was AMAZING and so thankful for you willingness to present your knowledge to Sedler students" — Sedler Center President, Xavier Student, February 2025
+
+13. "Thanks for taking time on Saturday to facilitate a great conversation with the cohort – feedback was terrific! I'm glad you enjoyed teaching them, they were a great group." — Xavier Faculty/Administrator, May 2025
+
+14. "Dr. Humphrey's lecture on AI in business was an enlightening experience that provided both theoretical and practical knowledge. His insights into generative AI, productivity enhancements, and prompting techniques were invaluable, offering a solid foundation for understanding AI's potential and limitations." — EMBA Student, November 2024
+
+15. "Jarrod Humphrey's lecture on artificial intelligence was illuminating and extremely interesting." — EMBA Student, November 2024
+
+16. "I was very much looking forward to Jarrod's presentation, and he did not disappoint! I use AI somewhat regularly in my day-to-day work, and I still feel like I took a few concepts away." — EMBA Student, November 2024
+
+17. "One thing I found amazing was the four different reasons Jarrod suggested using artificial intelligence: the 'learning luminary,' 'brainstorming buddy,' 'correspondence calculator,' and 'data decoder.' I've used AI for all of these purposes, but have never found such a useful model for describing many of the use cases for AI." — EMBA Student, November 2024
+
+18. "Jarrod's breakdown of AI's 'four friends:' correspondence, idea generation, data analysis, and learning, provided a practical roadmap for different applications." — EMBA Student, November 2024
+
+19. "One of the most impactful points was how AI can be a significant productivity booster. For instance, the research discussed in the presentation demonstrated how consultants using AI completed tasks faster and with higher quality than those without AI assistance. This finding is compelling because it underscores how AI can elevate work performance, not by replacing human effort but by augmenting it." — EMBA Student, November 2024
+
+20. "As a project manager at GE, Dr. Humphrey's insights into AI offer several practical applications that can enhance both my workflow and my team's productivity." — EMBA Student (GE Project Manager), November 2024
+
+21. "Dr. Humphrey began by demystifying AI and the concept of generative models, explaining how these systems use vast amounts of data to learn, recognize patterns, and produce unique outputs. This foundational knowledge was crucial as it helped me appreciate the underlying mechanisms driving AI tools like ChatGPT." — EMBA Student, November 2024
+
+22. "The session's emphasis on prompting—crafting detailed, context-rich inputs to elicit accurate AI responses—was both practical and insightful. Dr. Humphrey shared various techniques for effective prompting, including the importance of a larger 'context window' and adding specifics to enrich responses." — EMBA Student, November 2024
+
+23. "Jarrod introduced the concept of the 'Hype Cycle,' which is a framework that shows the typical trajectory of new technologies through phases of excitement, disillusionment, and eventual maturity. He noted that AI currently occupies a pivotal position within this cycle, characterized by both significant enthusiasm and a degree of skepticism. This context is crucial for understanding how businesses might approach the adoption of AI technologies." — EMBA Student, November 2024
+
+24. "While I think AI can be incredibly useful, I appreciated Jarrod's comment about being carful to ensure it isn't used to undermine critical thinking. Perhaps this has been some of my hesitation in using it too much in the past. I wouldn't want to become fully reliant on it or have some fear that what it is generating may be untruthful." — EMBA Student, November 2024
+
+25. "Reflecting on the talk provided valuable insights into integrating AI into personal and professional tasks. One key takeaway was the advice to delegate activities that don't add value to my life. By offloading repetitive or mundane duties, I can concentrate on more meaningful activities, ultimately enhancing productivity and personal satisfaction. This aligns perfectly with Jarrod's recommendation to start using AI for 'disposable tasks,' which are routine, low-priority, and quickly discarded after completion." — EMBA Student, November 2024
+
+## SURVEY RESULTS
+
+26. 100% Net Promoter Score — XLC AI in Business (Sedler Talk), Fall 2024
+
+27. 9.8/10 Average Rating — XLC AI in Business (Sedler Talk), Fall 2024
+
+28. 100% Engagement Rating (71% "Extremely" + 29% "Very") — XLC AI Talk 1, February 2025
+
+29. 96% Will Implement AI Tools — XLC AI Talk 1, February 2025
+
+30. 9.27/10 Word of Mouth Score — XLC AI Talk 2
+
+31. 90% Survey Response Rate — XLC AI in Business (Sedler Talk), Fall 2024
+
+32. 58% rated "Extremely clear" — XLC AI Talk 1, February 2025
+
+33. 96% combined "Very/Extremely clear" — XLC AI Talk 1, February 2025
+
+34. 67% rated "To a very great extent" enhanced understanding — XLC AI Talk 1, February 2025
+
+35. 71% rated "Extremely engaging" — XLC AI Talk 1, February 2025
+
+36. 71% "Extremely likely" to implement AI tools — XLC AI Talk 1, February 2025
+
+37. 91% already using AI at some frequency before presentation — XLC AI Talk 1, February 2025
+
+38. 88% active AI users after presentation — XLC AI Talk 1, February 2025
+
+39. "Presentation was extremely engaging and inspiring to students." — Event Attendee, XLC AI Talk, February 2025
+
+40. 77.27% Promoter score — XLC AI Talk 2
+
+41. 0% Detractors — XLC AI Talk 2
+
+42. 64% "Strongly Agree" facilitator was engaging — XLC AI Talk 2
+
+43. 73% "Strongly Agree" facilitator encouraged open participation — XLC AI Talk 2
+
+44. 55% "Strongly Agree" content was relevant and actionable — XLC AI Talk 2
+
+45. 64% "Strongly Agree" covered enough material — XLC AI Talk 2
+
+46. 63.64% had attended XLC programs before (repeat customers) — XLC AI Talk 2
+
+47. "Overall, the results for the fall session are incredibly positive! When looking at the matrix questions (Q2), the responses strongly lean towards the 'strongly agree' end of the scale which is the goal. We received many positive comments praising the session which show the group greatly enjoyed it." — Xavier Leadership Center, Survey Results Email, October 2024
+
+48. "Overall, the feedback was extremely positive and most answered 'Strongly Agree' to the prompts." — Xavier Leadership Center Staff, March 2025
+
+49. "Instructor was very thorough, relatable, interactive, and showed examples he made. He did a great job!" — Event Attendee
+
+50. "Instructor was well informed, was able to provide real world examples." — Event Attendee
+
+## MANUSCRIPTS
+
+51. Academic research paper: "I like the bots but my employer doesn't! An examination of AI status incongruence" — Submitted to academic journal, study of 243 working adults
+
+52. Active research program on AI adoption, exposure, and implementation — Manuscripts in development
+
+## PANEL PHOTOS
+
+53. Cincinnati AI Week 2024 — Panelist on AI in Education
+
+54. Xavier Business School Panel — Organized panel featuring Dean of Business School
