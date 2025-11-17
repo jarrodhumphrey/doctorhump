@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDO - doctorhump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .chatbot-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .chatbot-wrapper:last-child {
+            margin-bottom: 0;
+        }
+
+        .chatbot-container {
+            min-height: 600px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .chatbot-wrapper {
+                padding: 20px;
+            }
+
+            .chatbot-container {
+                min-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CDO AI Assistants</h1>
+
+        <!-- Chatbot 1 -->
+        <div class="chatbot-wrapper">
+            <div id="customgpt_chat_1" class="chatbot-container"></div>
+        </div>
+
+        <!-- Chatbot 2 -->
+        <div class="chatbot-wrapper">
+            <div id="customgpt_chat_2" class="chatbot-container"></div>
+        </div>
+
+        <!-- Chatbot 3 -->
+        <div class="chatbot-wrapper">
+            <div id="customgpt_chat_3" class="chatbot-container"></div>
+        </div>
+    </div>
+
+    <!-- Chatbot 1 Script -->
+    <script src="https://cdn.customgpt.ai/js/embed.js" defer div_id="customgpt_chat_1" p_id="85171" p_key="6691240352d44c1d1a55dd6403074e59"></script>
+
+    <!-- Chatbot 2 Script -->
+    <script src="https://cdn.customgpt.ai/js/embed.js" defer div_id="customgpt_chat_2" p_id="86004" p_key="40ef6cb327cea87b81866adf6c09613c"></script>
+
+    <!-- Chatbot 3 Script -->
+    <script src="https://cdn.customgpt.ai/js/embed.js" defer div_id="customgpt_chat_3" p_id="86009" p_key="76084897b45e8c8c38dbab45dc247dc2"></script>
+</body>
+</html>
