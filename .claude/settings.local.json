@@ -18,7 +18,9 @@
       "Bash(dir:*)",
       "Bash(mkdir:*)",
       "Bash(git rm:*)",
-      "Bash(python combine_testimonials.py:*)"
+      "Bash(python combine_testimonials.py:*)",
+      "Bash(git remote:*)",
+      "Bash(git mv:*)"
     ],
     "deny": [],
     "ask": []
