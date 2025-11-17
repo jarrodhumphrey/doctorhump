@@ -68,6 +68,45 @@
             line-height: 1.6;
         }
 
+        /* Student Testimonial Styles */
+        .student-testimonial {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .student-testimonial .quote {
+            font-size: 0.95rem;
+            color: #2d3748;
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .student-testimonial .quote::before {
+            content: '"';
+            font-size: 2.5rem;
+            color: #667eea;
+            position: absolute;
+            left: -15px;
+            top: -10px;
+            opacity: 0.3;
+        }
+
+        .student-testimonial .student-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 3px;
+        }
+
+        .student-testimonial .student-role {
+            font-size: 0.85rem;
+            color: #718096;
+            line-height: 1.4;
+        }
+
         .chatbot-wrapper {
             flex: 1;
             background: rgba(255, 255, 255, 0.95);
@@ -483,6 +522,11 @@
             <div class="info-box">
                 <h2>Meet Emmy</h2>
                 <p>The Empathetic Confidence Builder who helps students overcome emotional barriers like intimidation and fear of judgment. Emmy creates a safe, judgment-free space to build clarity and confidence.</p>
+                <div class="student-testimonial">
+                    <p class="quote">"Career services felt intimidating at first. I was worried about being judged for not having everything figured out. The CDO team helped me overcome those feelings and build real confidence in my career path."</p>
+                    <p class="student-name">— Olivia Pendleton '24</p>
+                    <p class="student-role">Commercial Business Analyst at 84.51°</p>
+                </div>
             </div>
             <div class="chatbot-wrapper">
                 <div id="customgpt_chat_1" class="chatbot-container"></div>
@@ -494,6 +538,11 @@
             <div class="info-box">
                 <h2>Meet Dart</h2>
                 <p>The High-Efficiency Triage Agent designed to maximize staff time. Dart handles simple, repetitive questions and seamlessly schedules meetings, shifting the intellectual load from CDO professionals to AI.</p>
+                <div class="student-testimonial">
+                    <p class="quote">"I had quick questions about resumes and interview prep, and the CDO made it so easy to get answers fast. Their efficiency helped me stay on track during a busy semester while job hunting."</p>
+                    <p class="student-name">— Aiden Neuman '25</p>
+                    <p class="student-role">Logistics Account Manager at We Ship It LLC</p>
+                </div>
             </div>
             <div class="chatbot-wrapper">
                 <div id="customgpt_chat_2" class="chatbot-container"></div>
@@ -505,6 +554,11 @@
             <div class="info-box">
                 <h2>Meet Compass</h2>
                 <p>The Personalized Navigator and Engagement Planner. Compass provides major-specific guidance and customized yearly checklists, making career development relevant and accessible for all students, especially first-years.</p>
+                <div class="student-testimonial">
+                    <p class="quote">"The CDO gave me personalized guidance tailored to my marketing major. Having a clear roadmap from freshman year helped me land my dream job in e-commerce right after graduation."</p>
+                    <p class="student-name">— Abigail Hall '25</p>
+                    <p class="student-role">SEO & E-Commerce Specialist at Range USA</p>
+                </div>
             </div>
             <div class="chatbot-wrapper">
                 <div id="customgpt_chat_3" class="chatbot-container"></div>
