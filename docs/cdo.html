@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -32,21 +32,65 @@
             letter-spacing: -1px;
         }
 
-        .chatbot-wrapper {
+        .chatbot-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .chatbot-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .chatbot-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .info-box {
+            flex: 0 0 300px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 30px;
-            margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
-        .chatbot-wrapper:last-child {
-            margin-bottom: 0;
+        .info-box h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .chatbot-wrapper {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         .chatbot-container {
             min-height: 600px;
             width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .chatbot-section,
+            .chatbot-section.reverse {
+                flex-direction: column;
+            }
+
+            .info-box {
+                flex: 1 1 auto;
+                width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -61,26 +105,410 @@
             .chatbot-container {
                 min-height: 500px;
             }
+
+            .info-box {
+                padding: 20px;
+            }
+        }
+
+        /* Coach Finder Styles */
+        .coach-finder-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .coach-finder-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .coach-finder-section .subtitle {
+            font-size: 1.1rem;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .major-selector {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .selector-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .selector-column {
+            flex: 1;
+        }
+
+        .selector-column label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+
+        .major-selector select {
+            width: 100%;
+            padding: 18px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: white;
+            color: #2d3748;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .major-selector select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .major-selector select:disabled {
+            background: #f7fafc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        #specificMajorSelect {
+            display: none;
+        }
+
+        #specificMajorSelect.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .selector-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .selector-column {
+                margin-bottom: 20px;
+            }
+        }
+
+        .coach-card {
+            display: none;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .coach-card.active {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .coach-photo {
+            flex: 0 0 180px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .coach-info {
+            flex: 1;
+        }
+
+        .coach-info h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .coach-info .coach-title {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .coach-info .bio {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .schedule-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .schedule-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: 60px 0 50px;
+        }
+
+        .section-divider h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .section-divider p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .coach-finder-section {
+                padding: 30px 20px;
+            }
+
+            .coach-finder-section h2 {
+                font-size: 2rem;
+            }
+
+            .coach-card.active {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .coach-photo {
+                flex: 0 0 150px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .coach-info h3 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>CDO AI Assistants</h1>
+        <h1>Xavier Career Development</h1>
 
-        <!-- Chatbot 1 -->
-        <div class="chatbot-wrapper">
-            <div id="customgpt_chat_1" class="chatbot-container"></div>
+        <!-- Coach Finder Section -->
+        <div class="coach-finder-section">
+            <h2>Find Your Career Coach</h2>
+            <p class="subtitle">Select your major to connect with your dedicated career coach</p>
+
+            <div class="major-selector">
+                <div class="selector-row">
+                    <div class="selector-column">
+                        <label for="collegeSelect">Step 1: Select Your Career Community</label>
+                        <select id="collegeSelect" onchange="showMajors()">
+                            <option value="">-- Choose Career Community --</option>
+                            <option value="liberal-arts">Liberal Arts / APEX</option>
+                            <option value="exploratory">Exploratory / Undecided</option>
+                            <option value="arts-comm">Arts & Communication</option>
+                            <option value="business-finance">Business - Financial, Economic, Insurance & Operations</option>
+                            <option value="business-mgmt">Business - Management, Marketing, & Sports</option>
+                            <option value="business-grad">Business - Graduate Students</option>
+                            <option value="education">Education</option>
+                            <option value="government">Government, Human Services, Non-Profit, & Law</option>
+                            <option value="humanities">Humanities</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="stem">STEM</option>
+                        </select>
+                    </div>
+                    <div class="selector-column" id="specificMajorSelect">
+                        <label for="majorSelect">Step 2: Select Your Major</label>
+                        <select id="majorSelect" onchange="showCoach()">
+                            <option value="">-- Choose Major --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nick Andriole -->
+            <div id="coach-nick" class="coach-card">
+                <img src="Nick_Andriole.jpg" alt="Nick Andriole" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Nick Andriole</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Nick transitioned from collegiate baseball coaching to higher education career services. He holds a Master's in Higher Education Administration from University of West Georgia and brings his student development philosophy to help Xavier students discover their career goals and build confidence for professional success.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Nick</a>
+                </div>
+            </div>
+
+            <!-- Alyson McAdams (Arts) -->
+            <div id="coach-alyson-arts" class="coach-card">
+                <img src="Alyson_McAdams.jpg" alt="Alyson McAdams" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Alyson McAdams</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Alyson holds a Master's in Higher Education and an MBA from Xavier University. As a former NCAA Division I student-athlete and team captain, she brings unique insights into competitive environments. She specializes in helping Arts & Communication students explore careers in creative industries, design, and media.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Alyson</a>
+                </div>
+            </div>
+
+            <!-- Alyson McAdams (Management) -->
+            <div id="coach-alyson-mgmt" class="coach-card">
+                <img src="Alyson_McAdams.jpg" alt="Alyson McAdams" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Alyson McAdams</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Alyson holds a Master's in Higher Education and an MBA from Xavier University. As a former NCAA Division I student-athlete and team captain, she brings unique insights into competitive environments. She specializes in helping Management, Marketing, Entrepreneurship, and Sports students develop their business careers.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Alyson</a>
+                </div>
+            </div>
+
+            <!-- Nick Andriole (Finance) -->
+            <div id="coach-nick-finance" class="coach-card">
+                <img src="Nick_Andriole.jpg" alt="Nick Andriole" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Nick Andriole</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Nick transitioned from collegiate baseball coaching to higher education career services. He holds a Master's in Higher Education Administration from University of West Georgia and brings his student development philosophy to help Finance, Economics, Accounting, and Business Analytics students navigate their career paths.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Nick</a>
+                </div>
+            </div>
+
+            <!-- Nick Andriole (Humanities) -->
+            <div id="coach-nick-hum" class="coach-card">
+                <img src="Nick_Andriole.jpg" alt="Nick Andriole" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Nick Andriole</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Nick transitioned from collegiate baseball coaching to higher education career services. He holds a Master's in Higher Education Administration from University of West Georgia and brings his student development philosophy to help Humanities students translate their liberal arts skills into meaningful career opportunities.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Nick</a>
+                </div>
+            </div>
+
+            <!-- Heather Deters (Education) -->
+            <div id="coach-heather-edu" class="coach-card">
+                <img src="Heather_Deters.jpg" alt="Heather Deters" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Heather Deters</h3>
+                    <p class="coach-title">Senior Assistant Director of Career Development</p>
+                    <p class="bio">Heather brings over 9 years of experience at Xavier with a Master's in Education from Ohio State. She leads mentoring programs and specializes in helping Education students navigate careers in teaching, social work, counseling, and educational leadership.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Heather</a>
+                </div>
+            </div>
+
+            <!-- Heather Deters (Healthcare) -->
+            <div id="coach-heather-health" class="coach-card">
+                <img src="Heather_Deters.jpg" alt="Heather Deters" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Heather Deters</h3>
+                    <p class="coach-title">Senior Assistant Director of Career Development</p>
+                    <p class="bio">Heather brings over 9 years of experience at Xavier with a Master's in Education from Ohio State. She leads mentoring programs and specializes in helping Healthcare students navigate careers in nursing, pre-health professions, and health sciences.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Heather</a>
+                </div>
+            </div>
+
+            <!-- Cheyenne Edo-Osagie (Government) -->
+            <div id="coach-cheyenne-gov" class="coach-card">
+                <img src="Cheyenne_Edo_Osagie.jpg" alt="Cheyenne Edo-Osagie" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Cheyenne Edo-Osagie</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Cheyenne is a proud Xavier alumna with a Master's in Criminal Justice. She brings deep institutional knowledge and passion for student success to help Government, Law, Psychology, Criminal Justice, and Political Science students navigate careers in public service, law, and human services.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Cheyenne</a>
+                </div>
+            </div>
+
+            <!-- Cheyenne Edo-Osagie (STEM) -->
+            <div id="coach-cheyenne-stem" class="coach-card">
+                <img src="Cheyenne_Edo_Osagie.jpg" alt="Cheyenne Edo-Osagie" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Cheyenne Edo-Osagie</h3>
+                    <p class="coach-title">Assistant Director of Career Development</p>
+                    <p class="bio">Cheyenne is a proud Xavier alumna with a Master's in Criminal Justice. She brings deep institutional knowledge and passion for student success to help STEM students in Biology, Chemistry, Computer Science, Data Science, Physics, and Engineering explore technical and scientific careers.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Cheyenne</a>
+                </div>
+            </div>
+
+            <!-- Matescia Stroud -->
+            <div id="coach-matescia" class="coach-card">
+                <img src="Mateiscia_Stroud.jpg" alt="Matescia Stroud" class="coach-photo">
+                <div class="coach-info">
+                    <h3>Matescia Stroud</h3>
+                    <p class="coach-title">Associate Director of Employer Relations</p>
+                    <p class="bio">Matescia brings over 20 years of career development experience with a Master's in Human Resources. As Xavier's DEI and disability services liaison, she specializes in helping graduate business students navigate finance, economics, insurance, and business operations careers with a focus on inclusive professional development.</p>
+                    <a href="https://xavier.joinhandshake.com" target="_blank" class="schedule-btn">Schedule with Matescia</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Chatbot 2 -->
-        <div class="chatbot-wrapper">
-            <div id="customgpt_chat_2" class="chatbot-container"></div>
+        <!-- Section Divider -->
+        <div class="section-divider">
+            <h2>24/7 AI Career Assistants</h2>
+            <p>Need help right now? Chat with our AI assistants anytime</p>
         </div>
 
-        <!-- Chatbot 3 -->
-        <div class="chatbot-wrapper">
-            <div id="customgpt_chat_3" class="chatbot-container"></div>
+        <!-- Chatbot 1 - Info on Left -->
+        <div class="chatbot-section">
+            <div class="info-box">
+                <h2>Meet Emmy</h2>
+                <p>The Empathetic Confidence Builder who helps students overcome emotional barriers like intimidation and fear of judgment. Emmy creates a safe, judgment-free space to build clarity and confidence.</p>
+            </div>
+            <div class="chatbot-wrapper">
+                <div id="customgpt_chat_1" class="chatbot-container"></div>
+            </div>
+        </div>
+
+        <!-- Chatbot 2 - Info on Right -->
+        <div class="chatbot-section reverse">
+            <div class="info-box">
+                <h2>Meet Dart</h2>
+                <p>The High-Efficiency Triage Agent designed to maximize staff time. Dart handles simple, repetitive questions and seamlessly schedules meetings, shifting the intellectual load from CDO professionals to AI.</p>
+            </div>
+            <div class="chatbot-wrapper">
+                <div id="customgpt_chat_2" class="chatbot-container"></div>
+            </div>
+        </div>
+
+        <!-- Chatbot 3 - Info on Left -->
+        <div class="chatbot-section">
+            <div class="info-box">
+                <h2>Meet Compass</h2>
+                <p>The Personalized Navigator and Engagement Planner. Compass provides major-specific guidance and customized yearly checklists, making career development relevant and accessible for all students, especially first-years.</p>
+            </div>
+            <div class="chatbot-wrapper">
+                <div id="customgpt_chat_3" class="chatbot-container"></div>
+            </div>
         </div>
     </div>
 
@@ -92,5 +520,195 @@
 
     <!-- Chatbot 3 Script -->
     <script src="https://cdn.customgpt.ai/js/embed.js" defer div_id="customgpt_chat_3" p_id="86009" p_key="76084897b45e8c8c38dbab45dc247dc2"></script>
+
+    <!-- Coach Finder JavaScript -->
+    <script>
+        // Major mappings for each career community
+        const majorsByCollege = {
+            'liberal-arts': {
+                'Liberal Arts / APEX': [
+                    ['Liberal Arts / APEX (Any Major)', 'nick']
+                ]
+            },
+            'exploratory': {
+                'Exploratory / Undecided': [
+                    ['Exploratory / Undecided', 'nick']
+                ]
+            },
+            'arts-comm': {
+                'Arts & Communication': [
+                    ['3D Animation & Game Design', 'alyson-arts'],
+                    ['Art', 'alyson-arts'],
+                    ['Communication Studies', 'alyson-arts'],
+                    ['Digital Innovation, Film, & Television', 'alyson-arts'],
+                    ['Digital and Strategic Communication', 'alyson-arts'],
+                    ['Fine Arts', 'alyson-arts'],
+                    ['Graphic Design', 'alyson-arts']
+                ]
+            },
+            'business-finance': {
+                'Financial, Economic, Insurance & Business Operations': [
+                    ['Accounting', 'nick-finance'],
+                    ['Business Analytics and Information Systems', 'nick-finance'],
+                    ['Economics', 'nick-finance'],
+                    ['Finance', 'nick-finance']
+                ]
+            },
+            'business-mgmt': {
+                'Management, Marketing, & Sports': [
+                    ['Entrepreneurship & Innovation', 'alyson-mgmt'],
+                    ['International Business', 'alyson-mgmt'],
+                    ['Management', 'alyson-mgmt'],
+                    ['Marketing', 'alyson-mgmt'],
+                    ['Sport Administration', 'alyson-mgmt'],
+                    ['Sport Management & Marketing', 'alyson-mgmt']
+                ]
+            },
+            'business-grad': {
+                'Graduate Business': [
+                    ['Graduate Business (All Majors)', 'matescia']
+                ]
+            },
+            'education': {
+                'Education': [
+                    ['Coaching Education', 'heather-edu'],
+                    ['Educational Administration', 'heather-edu'],
+                    ['Pre-Elementary Education', 'heather-edu'],
+                    ['Elementary Education', 'heather-edu'],
+                    ['Middle Grades Education', 'heather-edu'],
+                    ['Secondary Education', 'heather-edu'],
+                    ['Montessori Education', 'heather-edu'],
+                    ['Multicultural Literature', 'heather-edu'],
+                    ['Music', 'heather-edu'],
+                    ['Music Performance', 'heather-edu'],
+                    ['Music Production', 'heather-edu'],
+                    ['Musical Theatre', 'heather-edu'],
+                    ['School Counseling', 'heather-edu'],
+                    ['Social Work', 'heather-edu'],
+                    ['Special Education', 'heather-edu'],
+                    ['TESOL', 'heather-edu'],
+                    ['Theatre', 'heather-edu']
+                ]
+            },
+            'government': {
+                'Government, Human Services, Non-Profit, & Law': [
+                    ['Criminal Justice', 'cheyenne-gov'],
+                    ['Gender & Diversity Studies', 'cheyenne-gov'],
+                    ['International Studies', 'cheyenne-gov'],
+                    ['Philosophy', 'cheyenne-gov'],
+                    ['Philosophy, Politics, and the Public (PPP)', 'cheyenne-gov'],
+                    ['Political Science', 'cheyenne-gov'],
+                    ['Psychology', 'cheyenne-gov'],
+                    ['Clinical Psychology', 'cheyenne-gov'],
+                    ['Sociology', 'cheyenne-gov']
+                ]
+            },
+            'humanities': {
+                'Humanities': [
+                    ['English', 'nick-hum'],
+                    ['Foreign Languages', 'nick-hum'],
+                    ['History', 'nick-hum'],
+                    ['Organizational Leadership', 'nick-hum'],
+                    ['Theology', 'nick-hum']
+                ]
+            },
+            'healthcare': {
+                'Healthcare': [
+                    ['Athletic Training', 'heather-health'],
+                    ['Exercise Science', 'heather-health'],
+                    ['Health Administration', 'heather-health'],
+                    ['Health Science and Wellness', 'heather-health'],
+                    ['Medical Health & Humanities', 'heather-health'],
+                    ['Nursing', 'heather-health'],
+                    ['Occupational Therapy', 'heather-health'],
+                    ['Pre-Dental', 'heather-health'],
+                    ['Pre-Medicine', 'heather-health'],
+                    ['Pre-Pharmacy', 'heather-health'],
+                    ['Pre-Veterinary Sciences', 'heather-health'],
+                    ['Speech, Language, & Communicative Behavior', 'heather-health']
+                ]
+            },
+            'stem': {
+                'STEM': [
+                    ['Actuarial Science', 'cheyenne-stem'],
+                    ['Artificial Intelligence', 'cheyenne-stem'],
+                    ['Applied Physics', 'cheyenne-stem'],
+                    ['Biology', 'cheyenne-stem'],
+                    ['Biomedical Sciences', 'cheyenne-stem'],
+                    ['Biophysics', 'cheyenne-stem'],
+                    ['Biological Sciences for Business', 'cheyenne-stem'],
+                    ['Chemistry', 'cheyenne-stem'],
+                    ['Computer Science', 'cheyenne-stem'],
+                    ['Cybersecurity', 'cheyenne-stem'],
+                    ['Data Science', 'cheyenne-stem'],
+                    ['Engineering Physics', 'cheyenne-stem'],
+                    ['Environmental Sciences & Sustainability', 'cheyenne-stem'],
+                    ['Genetics', 'cheyenne-stem'],
+                    ['Mathematics', 'cheyenne-stem'],
+                    ['Microbiology', 'cheyenne-stem'],
+                    ['Neuroscience', 'cheyenne-stem'],
+                    ['Physics', 'cheyenne-stem'],
+                    ['Teaching Life Integrated Science', 'cheyenne-stem'],
+                    ['Teaching Life Sciences & Chemistry', 'cheyenne-stem']
+                ]
+            }
+        };
+
+        function showMajors() {
+            const collegeSelect = document.getElementById('collegeSelect');
+            const majorSelect = document.getElementById('majorSelect');
+            const specificMajorDiv = document.getElementById('specificMajorSelect');
+
+            // Clear previous majors
+            majorSelect.innerHTML = '<option value="">-- Choose Major --</option>';
+
+            // Hide coach cards
+            const allCards = document.querySelectorAll('.coach-card');
+            allCards.forEach(card => card.classList.remove('active'));
+
+            const selectedCollege = collegeSelect.value;
+
+            if (selectedCollege && majorsByCollege[selectedCollege]) {
+                // Show the major dropdown
+                specificMajorDiv.classList.add('active');
+
+                // Populate majors organized by category
+                const categories = majorsByCollege[selectedCollege];
+                for (const [category, majors] of Object.entries(categories)) {
+                    const optgroup = document.createElement('optgroup');
+                    optgroup.label = category;
+
+                    majors.forEach(([majorName, coachId]) => {
+                        const option = document.createElement('option');
+                        option.value = coachId;
+                        option.textContent = majorName;
+                        optgroup.appendChild(option);
+                    });
+
+                    majorSelect.appendChild(optgroup);
+                }
+            } else {
+                // Hide the major dropdown
+                specificMajorDiv.classList.remove('active');
+            }
+        }
+
+        function showCoach() {
+            // Hide all coach cards
+            const allCards = document.querySelectorAll('.coach-card');
+            allCards.forEach(card => card.classList.remove('active'));
+
+            // Get selected value
+            const selectedValue = document.getElementById('majorSelect').value;
+
+            // Show the selected coach card
+            if (selectedValue) {
+                const coachCard = document.getElementById('coach-' + selectedValue);
+                if (coachCard) {
+                    coachCard.classList.add('active');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
