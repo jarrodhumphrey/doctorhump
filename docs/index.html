@@ -26,7 +26,7 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 20px;
             padding: 60px 50px;
             max-width: 600px;
@@ -51,7 +51,7 @@
 
         .position {
             font-size: 1rem;
-            color: #718096;
+            color: #2d3748;
             margin-bottom: 40px;
             line-height: 1.6;
         }
@@ -84,6 +84,235 @@
 
         .button:active {
             transform: translateY(0);
+        }
+
+        /* Space-themed button */
+        .btn-container {
+            position: relative;
+            overflow: visible;
+        }
+
+        .btn-container::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            z-index: -1;
+            background: linear-gradient(80deg, #e8a560, #c86d3a, #2a1810, #03001e);
+            filter: blur(20px);
+            opacity: 0;
+            border-radius: 12px;
+        }
+
+        .btn-container:hover {
+            transform: scale(1.1);
+            transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+        }
+
+        .btn-container:hover::after {
+            transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+            opacity: 1;
+        }
+
+        .btn-container:active {
+            transform: scale(1);
+        }
+
+        .btn-container:active::after {
+            opacity: 0;
+        }
+
+        .space-btn {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border: 0;
+            outline: 0;
+            border-radius: 12px;
+            background: linear-gradient(80deg, #e8a560, #c86d3a, #2a1810, #03001e);
+            cursor: pointer;
+            display: block;
+            padding: 18px 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .star {
+            width: 1px;
+            height: 1px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            animation: blink 2s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .shooting-star {
+            width: 80px;
+            height: 1px;
+            position: absolute;
+            background: linear-gradient(80deg, #ffffffff, #ffffff00);
+            border-radius: 50%;
+            transform: rotate(-40deg);
+            opacity: 0;
+        }
+
+        .shooting-star-1 {
+            animation: fallingStar1 3s 2s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .shooting-star-2 {
+            animation: fallingStar2 4s 5s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .shooting-star-3 {
+            animation: fallingStar3 3.5s 8s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .shooting-star-4 {
+            animation: fallingStar4 4s 11s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        /* Variations for other buttons */
+        .btn-container:nth-child(2) .shooting-star-1 {
+            animation: fallingStar1 3s 3s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(2) .shooting-star-2 {
+            animation: fallingStar2 4s 7s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(2) .shooting-star-3 {
+            animation: fallingStar3 3.5s 10s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(2) .shooting-star-4 {
+            animation: fallingStar4 4s 13s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(3) .shooting-star-1 {
+            animation: fallingStar1 3s 4s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(3) .shooting-star-2 {
+            animation: fallingStar2 4s 6s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(3) .shooting-star-3 {
+            animation: fallingStar3 3.5s 9s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(3) .shooting-star-4 {
+            animation: fallingStar4 4s 12s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(4) .shooting-star-1 {
+            animation: fallingStar1 3s 1s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(4) .shooting-star-2 {
+            animation: fallingStar2 4s 4s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(4) .shooting-star-3 {
+            animation: fallingStar3 3.5s 7s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        .btn-container:nth-child(4) .shooting-star-4 {
+            animation: fallingStar4 4s 10s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                box-shadow: 0 0 10px 0 white;
+            }
+            50% {
+                box-shadow: 0 0 10px 2px white;
+            }
+            100% {
+                box-shadow: 0 0 10px 0 white;
+            }
+        }
+
+        @keyframes fallingStar1 {
+            0% {
+                top: -10px;
+                left: 100%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 80px;
+                left: 20%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fallingStar2 {
+            0% {
+                top: -10px;
+                left: 80%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 80px;
+                left: 0%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fallingStar3 {
+            0% {
+                top: -10px;
+                left: 60%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 80px;
+                left: -20%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fallingStar4 {
+            0% {
+                top: -10px;
+                left: 40%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 80px;
+                left: -40%;
+                opacity: 0;
+            }
         }
 
         .divider {
@@ -123,10 +352,62 @@
         <div class="divider"></div>
 
         <div class="links">
-            <a href="mailto:jarrodhumphrey@gmail.com" class="button">Email (Personal)</a>
-            <a href="mailto:humphreyj5@xavier.edu" class="button">Email (Xavier)</a>
-            <a href="https://www.linkedin.com/in/jarrodhhumphrey/" target="_blank" class="button">Find Me on LinkedIn</a>
-            <a href="http://youtube.com/channel/UCz0xVTp0WazQLvGRUGHxPug" target="_blank" class="button">Watch on YouTube</a>
+            <div class="btn-container">
+                <a href="mailto:jarrodhumphrey@gmail.com" class="space-btn">
+                    <span>Email (Personal)</span>
+                    <div class="star" style="top: 10px; left: 20px;"></div>
+                    <div class="star" style="top: 25px; left: 80px;"></div>
+                    <div class="star" style="top: 40px; left: 150px;"></div>
+                    <div class="star" style="top: 15px; left: 200px;"></div>
+                    <div class="star" style="top: 35px; left: 250px;"></div>
+                    <div class="shooting-star shooting-star-1"></div>
+                    <div class="shooting-star shooting-star-2"></div>
+                    <div class="shooting-star shooting-star-3"></div>
+                    <div class="shooting-star shooting-star-4"></div>
+                </a>
+            </div>
+            <div class="btn-container">
+                <a href="mailto:humphreyj5@xavier.edu" class="space-btn">
+                    <span>Email (Xavier)</span>
+                    <div class="star" style="top: 10px; left: 20px;"></div>
+                    <div class="star" style="top: 25px; left: 80px;"></div>
+                    <div class="star" style="top: 40px; left: 150px;"></div>
+                    <div class="star" style="top: 15px; left: 200px;"></div>
+                    <div class="star" style="top: 35px; left: 250px;"></div>
+                    <div class="shooting-star shooting-star-1"></div>
+                    <div class="shooting-star shooting-star-2"></div>
+                    <div class="shooting-star shooting-star-3"></div>
+                    <div class="shooting-star shooting-star-4"></div>
+                </a>
+            </div>
+            <div class="btn-container">
+                <a href="https://www.linkedin.com/in/jarrodhumphrey/" target="_blank" class="space-btn">
+                    <span>Find Me on LinkedIn</span>
+                    <div class="star" style="top: 10px; left: 20px;"></div>
+                    <div class="star" style="top: 25px; left: 80px;"></div>
+                    <div class="star" style="top: 40px; left: 150px;"></div>
+                    <div class="star" style="top: 15px; left: 200px;"></div>
+                    <div class="star" style="top: 35px; left: 250px;"></div>
+                    <div class="shooting-star shooting-star-1"></div>
+                    <div class="shooting-star shooting-star-2"></div>
+                    <div class="shooting-star shooting-star-3"></div>
+                    <div class="shooting-star shooting-star-4"></div>
+                </a>
+            </div>
+            <div class="btn-container">
+                <a href="http://youtube.com/channel/UCz0xVTp0WazQLvGRUGHxPug" target="_blank" class="space-btn">
+                    <span>Watch on YouTube</span>
+                    <div class="star" style="top: 10px; left: 20px;"></div>
+                    <div class="star" style="top: 25px; left: 80px;"></div>
+                    <div class="star" style="top: 40px; left: 150px;"></div>
+                    <div class="star" style="top: 15px; left: 200px;"></div>
+                    <div class="star" style="top: 35px; left: 250px;"></div>
+                    <div class="shooting-star shooting-star-1"></div>
+                    <div class="shooting-star shooting-star-2"></div>
+                    <div class="shooting-star shooting-star-3"></div>
+                    <div class="shooting-star shooting-star-4"></div>
+                </a>
+            </div>
         </div>
     </div>
 </body>
