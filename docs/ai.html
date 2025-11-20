@@ -176,6 +176,84 @@
             }
         }
 
+        .initiatives-section {
+            margin-top: 60px;
+        }
+
+        .initiatives-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .initiative-carousel {
+            position: relative;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 40px;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .initiative-slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .initiative-slide.active {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .initiative-image {
+            flex: 0 0 300px;
+            height: 250px;
+            background: rgba(200, 200, 200, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+            border: 2px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        .initiative-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .initiative-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .initiative-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            background: linear-gradient(80deg, #e8a560, #c86d3a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .initiative-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
         .testimonials-section {
             margin-top: 60px;
         }
@@ -347,6 +425,28 @@
                 height: 40px;
                 font-size: 1.2rem;
             }
+
+            .initiative-slide.active {
+                flex-direction: column;
+            }
+
+            .initiative-image {
+                flex: 0 0 auto;
+                width: 100%;
+                height: 200px;
+            }
+
+            .initiative-carousel {
+                padding: 30px 50px;
+            }
+
+            .initiative-title {
+                font-size: 1.3rem;
+            }
+
+            .initiative-description {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -372,6 +472,86 @@
             <div class="stat-item">
                 <div class="stat-number">15+</div>
                 <div class="stat-label">Organizations Trained</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- AI Initiatives Section -->
+        <div class="initiatives-section">
+            <h2 class="initiatives-heading">AI Initiatives & Impact</h2>
+
+            <div class="initiative-carousel">
+                <button class="carousel-arrow left" onclick="changeInitiativeSlide(-1)">‹</button>
+                <button class="carousel-arrow right" onclick="changeInitiativeSlide(1)">›</button>
+
+                <div class="initiative-slide active">
+                    <div class="initiative-image">
+                        [Image: Classroom or course materials]
+                    </div>
+                    <div class="initiative-content">
+                        <div class="initiative-title">Academic Leadership</div>
+                        <div class="initiative-description">
+                            Teaching MGMT 342/642: Managing AI & Emerging Technology to undergraduate and online MBA students at Xavier University, preparing the next generation of business leaders to leverage AI strategically.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="initiative-slide">
+                    <div class="initiative-image">
+                        [Image: Cincinnatus chatbot or news screenshot]
+                    </div>
+                    <div class="initiative-content">
+                        <div class="initiative-title">AI Ethics Chatbot</div>
+                        <div class="initiative-description">
+                            Developed the Cincinnatus AI Ethics chatbot, featured on local news for its innovative approach to teaching ethical AI principles and fostering responsible technology adoption.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="initiative-slide">
+                    <div class="initiative-image">
+                        [Image: Career development or chatbot interface]
+                    </div>
+                    <div class="initiative-content">
+                        <div class="initiative-title">Career Development AI</div>
+                        <div class="initiative-description">
+                            Created custom AI chatbots for Xavier's Career Development Office, helping students and alumni leverage artificial intelligence for career planning, resume optimization, and job search strategies.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="initiative-slide">
+                    <div class="initiative-image">
+                        [Image: Speaking engagement or chamber event]
+                    </div>
+                    <div class="initiative-content">
+                        <div class="initiative-title">Community Engagement</div>
+                        <div class="initiative-description">
+                            Invited speaker at local Chamber of Commerce events, sharing practical AI insights with business leaders and helping organizations understand how to implement AI solutions effectively.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="initiative-slide">
+                    <div class="initiative-image">
+                        [Image: Research papers or academic materials]
+                    </div>
+                    <div class="initiative-content">
+                        <div class="initiative-title">Research & Scholarship</div>
+                        <div class="initiative-description">
+                            Currently developing two AI-related manuscripts exploring the intersection of artificial intelligence, business strategy, and organizational transformation in the modern workplace.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentInitiativeSlide(0)"></span>
+                <span class="dot" onclick="currentInitiativeSlide(1)"></span>
+                <span class="dot" onclick="currentInitiativeSlide(2)"></span>
+                <span class="dot" onclick="currentInitiativeSlide(3)"></span>
+                <span class="dot" onclick="currentInitiativeSlide(4)"></span>
             </div>
         </div>
 
@@ -715,6 +895,7 @@
     </div>
 
     <script>
+        // Testimonials carousel
         let slideIndex = 0;
 
         function changeSlide(n) {
@@ -727,7 +908,7 @@
 
         function showSlide(n) {
             const slides = document.getElementsByClassName("testimonial-slide");
-            const dots = document.getElementsByClassName("dot");
+            const dots = document.querySelectorAll(".testimonials-section .dot");
 
             if (n >= slides.length) { slideIndex = 0; }
             if (n < 0) { slideIndex = slides.length - 1; }
@@ -741,6 +922,35 @@
 
             slides[slideIndex].classList.add("active");
             dots[slideIndex].classList.add("active");
+        }
+
+        // Initiatives carousel
+        let initiativeIndex = 0;
+
+        function changeInitiativeSlide(n) {
+            showInitiativeSlide(initiativeIndex += n);
+        }
+
+        function currentInitiativeSlide(n) {
+            showInitiativeSlide(initiativeIndex = n);
+        }
+
+        function showInitiativeSlide(n) {
+            const slides = document.getElementsByClassName("initiative-slide");
+            const dots = document.querySelectorAll(".initiatives-section .dot");
+
+            if (n >= slides.length) { initiativeIndex = 0; }
+            if (n < 0) { initiativeIndex = slides.length - 1; }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+
+            slides[initiativeIndex].classList.add("active");
+            dots[initiativeIndex].classList.add("active");
         }
     </script>
 </body>
