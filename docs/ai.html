@@ -32,6 +32,28 @@
             max-width: 900px;
             width: 100%;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .back-home:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3748;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -414,6 +436,14 @@
         @media (max-width: 768px) {
             .container {
                 padding: 40px 30px;
+                padding-top: 60px;
+            }
+
+            .back-home {
+                top: 15px;
+                right: 15px;
+                font-size: 0.85rem;
+                padding: 6px 12px;
             }
 
             h1 {
@@ -490,6 +520,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-home">← Back to Home</a>
         <h1>AI Leadership at Xavier</h1>
 
         <div class="divider"></div>
@@ -660,7 +691,7 @@
                     <div class="initiative-content">
                         <div class="initiative-title">AI Ethics Chatbot</div>
                         <div class="initiative-description">
-                            Developed the Cincinnatus AI Ethics chatbot, <a href="https://local12.com/news/local/first-of-its-kind-program-designed-by-xavier-students-to-help-in-the-classroom-cincinnati-ohio-university-ai-dartagnan-generative-artificial-intelligencd" target="_blank" style="color: #c86d3a; text-decoration: underline;">featured on local news</a> for its innovative approach to teaching ethical AI principles and fostering responsible technology adoption.
+                            Developed the D'Artagnan AI Ethics chatbot—the world's first Retrieval Augmented Generation (RAG) model trained exclusively on ethical AI usage for college students. This groundbreaking, first-of-its-kind chatbot was <a href="https://local12.com/news/local/first-of-its-kind-program-designed-by-xavier-students-to-help-in-the-classroom-cincinnati-ohio-university-ai-dartagnan-generative-artificial-intelligencd" target="_blank" style="color: #c86d3a; text-decoration: underline;">featured on local news</a> for its pioneering approach to teaching ethical AI principles and fostering responsible technology adoption.
                         </div>
                     </div>
                 </div>
