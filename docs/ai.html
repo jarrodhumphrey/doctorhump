@@ -641,7 +641,7 @@
                 <button class="carousel-arrow left" onclick="changeInitiativeSlide(-1)">‹</button>
                 <button class="carousel-arrow right" onclick="changeInitiativeSlide(1)">›</button>
 
-                <div class="initiative-slide active">
+                <div class="initiative-slide">
                     <div class="initiative-image">
                         <img src="academic-leadership.jpg" alt="Academic Leadership">
                     </div>
@@ -667,17 +667,17 @@
 
                 <div class="initiative-slide">
                     <div class="initiative-image">
-                        [Image: Speaking engagement or chamber event]
+                        <img src="cincy-ai-week-panel.jpg" alt="Cincy AI Week Panel">
                     </div>
                     <div class="initiative-content">
                         <div class="initiative-title">Community Engagement</div>
                         <div class="initiative-description">
-                            Invited speaker at local Chamber of Commerce events, sharing practical AI insights with business leaders and helping organizations understand how to implement AI solutions effectively.
+                            Invited panelist at Cincy AI Week 2024 for an AI and Education panel alongside local AI leaders in education. Also a <a href="https://www.eaglecountryonline.com/news/local-news/panelists-announced-for-the-annual-dearborn-co-chamber-business-breakfast/" target="_blank" style="color: #c86d3a; text-decoration: underline;">featured speaker at Chamber of Commerce events</a>, sharing practical AI insights with business leaders across the Greater Cincinnati region.
                         </div>
                     </div>
                 </div>
 
-                <div class="initiative-slide">
+                <div class="initiative-slide active">
                     <div class="initiative-image">
                         <img src="AI_Research.png" alt="Research & Scholarship">
                     </div>
@@ -692,10 +692,10 @@
             </div>
 
             <div class="carousel-dots">
-                <span class="dot active" onclick="currentInitiativeSlide(0)"></span>
+                <span class="dot" onclick="currentInitiativeSlide(0)"></span>
                 <span class="dot" onclick="currentInitiativeSlide(1)"></span>
                 <span class="dot" onclick="currentInitiativeSlide(2)"></span>
-                <span class="dot" onclick="currentInitiativeSlide(3)"></span>
+                <span class="dot active" onclick="currentInitiativeSlide(3)"></span>
             </div>
         </div>
 
@@ -949,7 +949,7 @@
         }
 
         // Initiatives carousel
-        let initiativeIndex = 0;
+        let initiativeIndex = 3;
 
         function changeInitiativeSlide(n) {
             showInitiativeSlide(initiativeIndex += n);
