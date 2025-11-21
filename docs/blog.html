@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - doctorhump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-image: url('james-webb-background_smallest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 15px 30px;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .nav-brand:hover {
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a.active {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Container */
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e0, transparent);
+            margin: 40px 0;
+        }
+
+        /* Blog Posts */
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-card:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-date::before {
+            content: "📅";
+        }
+
+        .blog-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .blog-title a {
+            text-decoration: none;
+            color: #2d3748;
+            transition: color 0.3s ease;
+        }
+
+        .blog-title a:hover {
+            color: #667eea;
+        }
+
+        .blog-excerpt {
+            font-size: 1.05rem;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .blog-tag {
+            background: linear-gradient(80deg, #e8a560, #c86d3a);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #c86d3a;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #e8a560;
+            transform: translateX(3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .blog-card {
+                padding: 25px;
+            }
+
+            .blog-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-brand">doctorhump</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="ai.html">AI Leadership</a>
+            <a href="mailto:jarrodhumphrey@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>The Agentic Blog</h1>
+        <div class="page-subtitle">
+            The world's first agentic blog - where every post shows the AI collaboration that created it
+        </div>
+
+        <!-- What Makes This Different -->
+        <div style="background: rgba(232, 165, 96, 0.25); padding: 25px; border-radius: 12px; margin-bottom: 40px; border-left: 4px solid #c86d3a;">
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #2d3748; margin-bottom: 12px;">What Makes This Different?</h3>
+            <p style="color: #2d3748; line-height: 1.7; margin: 0;">
+                Most AI-generated content hides the process. This blog does the opposite. Each post is co-authored with AI (primarily Claude), and you can view the entire conversation that created it. Click "🔬 View AI Collaboration" on any post to see exactly how human expertise and AI capabilities combined to produce the final content. Complete transparency, total education.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Blog Posts -->
+        <div class="blog-posts">
+            <!-- Placeholder Post -->
+            <div class="blog-card">
+                <div class="blog-date">Coming Soon</div>
+                <div class="blog-meta">
+                    <span class="blog-tag">AI Strategy</span>
+                    <span class="blog-tag">Management</span>
+                </div>
+                <div class="blog-title">
+                    <a href="blog/agentic-blog-sample.html">First Agentic Blog Post Coming Soon</a>
+                </div>
+                <div class="blog-excerpt">
+                    The first post is being written right now using the /blog workflow. Each post will show the complete AI collaboration that created it—full transparency, total education.
+                </div>
+                <a href="blog/agentic-blog-sample.html" class="read-more">View Sample Template →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

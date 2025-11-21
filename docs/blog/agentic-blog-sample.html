@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Agentic Blog Post - doctorhump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-image: url('../james-webb-background_smallest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 15px 30px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .nav-brand:hover {
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Article Container */
+        .article-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px 70px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+            transform: translateX(-3px);
+        }
+
+        .article-meta {
+            margin-bottom: 30px;
+        }
+
+        .article-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .article-meta-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .article-date {
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .article-authors {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.9rem;
+            color: #4a5568;
+        }
+
+        .article-authors strong {
+            color: #2d3748;
+        }
+
+        .claude-logo {
+            height: 28px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tag {
+            background: linear-gradient(80deg, #e8a560, #c86d3a);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            color: #2d3748;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e0, transparent);
+            margin: 40px 0;
+        }
+
+        /* View Collaboration Button */
+        .view-collaboration-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 30px;
+            background: linear-gradient(80deg, #e8a560, #c86d3a, #2a1810, #03001e);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(200, 109, 58, 0.3);
+            margin-top: 20px;
+        }
+
+        .view-collaboration-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 109, 58, 0.4);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #718096;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            color: #2d3748;
+        }
+
+        /* Chat Transcript Styles */
+        .transcript {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .message-header {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .message.human .message-header {
+            color: #3182ce;
+        }
+
+        .message.assistant .message-header {
+            color: #c86d3a;
+        }
+
+        .message-content {
+            background: #f7fafc;
+            padding: 15px 20px;
+            border-radius: 12px;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        .message.human .message-content {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+        }
+
+        .message.assistant .message-content {
+            background: #fff5f0;
+            border-left: 4px solid #c86d3a;
+        }
+
+        /* Author Section */
+        .author-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 12px;
+        }
+
+        .author-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .author-section p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .article-container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+                width: 95%;
+            }
+
+            .modal-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="nav-brand">doctorhump</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../ai.html">AI Leadership</a>
+            <a href="mailto:jarrodhumphrey@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+
+        <div class="article-date">November 21, 2025 · 5 min read</div>
+
+        <div class="article-tags">
+            <span class="tag">AI Strategy</span>
+            <span class="tag">Management</span>
+        </div>
+
+        <h1>Sample Agentic Blog Post Title</h1>
+
+        <div class="article-meta">
+            <div class="article-authors">
+                <strong>doctorhump</strong> & <img src="../claude_author.png" alt="Claude Sonnet 4.5" class="claude-logo">
+            </div>
+        </div>
+
+        <div class="article-content">
+            <p>This is where your actual blog post content goes. Write naturally about your topic - AI strategy, teaching experiences, research insights, whatever you're exploring.</p>
+
+            <p>The agentic co-authorship is already indicated in the metadata above. Your readers can see you worked with Claude, and they can click below to see exactly how the conversation unfolded.</p>
+
+            <h2>Your Section Headings Go Here</h2>
+
+            <p>Just write your post as you normally would. The transparency is built into the structure - no need to explain it in every post.</p>
+        </div>
+
+        <button class="view-collaboration-btn" onclick="openModal()">
+            🔬 View AI Collaboration
+        </button>
+    </div>
+
+    <!-- Modal for Transcript -->
+    <div id="transcriptModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">AI Collaboration Transcript</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+
+            <div class="transcript">
+                <!-- Human Message -->
+                <div class="message human">
+                    <div class="message-header">Jarrod Humphrey</div>
+                    <div class="message-content">
+                        Let's write a blog post about why AI won't replace good managers. I want to focus on how the skills needed to work with AI are the same skills needed to be a good manager.
+                    </div>
+                </div>
+
+                <!-- Claude Message -->
+                <div class="message assistant">
+                    <div class="message-header">Claude Sonnet 4.5</div>
+                    <div class="message-content">
+                        Great topic! I love this angle. Let me structure this around a few key points:
+
+                        1. The irony that AI skills = management skills
+                        2. Why bad managers struggle with AI for the same reasons they struggle with people
+                        3. What this means for career development
+
+                        Should we start with a hook about the common fear of AI replacing managers, then flip it?
+                    </div>
+                </div>
+
+                <!-- Human Message -->
+                <div class="message human">
+                    <div class="message-header">Jarrod Humphrey</div>
+                    <div class="message-content">
+                        Yes! Start with that fear, then hit them with the counterintuitive truth: AI exposes bad management, it doesn't threaten good management. Use the Ethan Mollick quote about AI skills being management skills.
+                    </div>
+                </div>
+
+                <!-- Claude Message -->
+                <div class="message assistant">
+                    <div class="message-header">Claude Sonnet 4.5</div>
+                    <div class="message-content">
+                        Perfect. Here's the opening:
+
+                        "Everyone's worried AI will replace managers. I hear it in every corporate training session I lead: 'Will AI take my job?' The executives at Fifth Third Bank ask it. The GE project managers ask it. Even my MBA students at Xavier ask it.
+
+                        But after training hundreds of professionals on generative AI and achieving an 87% Net Promoter Score doing it, I've learned something counterintuitive:
+
+                        AI doesn't threaten good management—it exposes bad management."
+
+                        How's that for a hook?
+                    </div>
+                </div>
+
+                <!-- Human Message -->
+                <div class="message human">
+                    <div class="message-header">Jarrod Humphrey</div>
+                    <div class="message-content">
+                        That's perfect! Love the specificity with Fifth Third and GE. Now let's build out the section on what skills AI actually needs, using Mollick's framework.
+                    </div>
+                </div>
+
+                <!-- This is just a sample - in production, you'd paste the full transcript here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('transcriptModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (!event || event.target.id === 'transcriptModal') {
+                document.getElementById('transcriptModal').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

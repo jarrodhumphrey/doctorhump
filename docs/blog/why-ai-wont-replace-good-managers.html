@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why AI Won't Replace Good Managers - doctorhump</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-image: url('../james-webb-background_smallest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 15px 30px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .nav-brand:hover {
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Article Container */
+        .article-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px 70px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+            transform: translateX(-3px);
+        }
+
+        .article-meta {
+            margin-bottom: 30px;
+        }
+
+        .article-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .article-meta-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .article-date {
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .article-authors {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.9rem;
+            color: #4a5568;
+        }
+
+        .article-authors strong {
+            color: #2d3748;
+        }
+
+        .claude-logo {
+            height: 28px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tag {
+            background: linear-gradient(80deg, #e8a560, #c86d3a);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            color: #2d3748;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        .article-content strong {
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e0, transparent);
+            margin: 40px 0;
+        }
+
+        .author-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 12px;
+        }
+
+        .author-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .author-section p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .author-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .author-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .author-link:hover {
+            color: #764ba2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .article-container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-content {
+                font-size: 1.05rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="nav-brand">doctorhump</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../ai.html">AI Leadership</a>
+            <a href="mailto:jarrodhumphrey@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+
+        <div class="article-date">November 21, 2025 · 5 min read</div>
+
+        <div class="article-tags">
+            <span class="tag">AI Strategy</span>
+            <span class="tag">Management</span>
+        </div>
+
+        <h1>Why AI Won't Replace Good Managers (It Will Replace Bad Ones)</h1>
+
+        <div class="article-meta">
+            <div class="article-authors">
+                <strong>doctorhump</strong> & <img src="../claude_author.png" alt="Claude Sonnet 4.5" class="claude-logo">
+            </div>
+        </div>
+
+        <div class="article-content">
+            <p>Everyone's worried AI will replace managers. I hear it in every corporate training session I lead: "Will AI take my job?" The executives at Fifth Third Bank ask it. The GE project managers ask it. Even my MBA students at Xavier ask it.</p>
+
+            <p>But after training hundreds of professionals on generative AI and achieving an 87% Net Promoter Score doing it, I've learned something counterintuitive:</p>
+
+            <p><strong>AI doesn't threaten good management—it exposes bad management.</strong></p>
+
+            <h2>The Skills AI Actually Needs</h2>
+
+            <p>As Professor Ethan Mollick puts it perfectly: "AI skills are basically the skills of good managers—delegation, clear explanations, getting a sense of individual strengths & weaknesses, division of labor, project management, clear feedback..."</p>
+
+            <p>Think about that for a moment. Every skill you need to work effectively with AI is the same skill you need to work effectively with humans:</p>
+
+            <ul>
+                <li><strong>Delegation:</strong> Knowing what tasks to hand off and to whom (or what)</li>
+                <li><strong>Clear communication:</strong> Explaining context, goals, and constraints</li>
+                <li><strong>Understanding capabilities:</strong> Recognizing what AI can and can't do well</li>
+                <li><strong>Giving feedback:</strong> Iterating when results aren't quite right</li>
+                <li><strong>Strategic thinking:</strong> Knowing which problems AI should solve vs. humans</li>
+            </ul>
+
+            <p>If you're a good manager, you already have these skills. AI just becomes another team member—albeit an incredibly fast, tireless, and sometimes frustratingly literal one.</p>
+
+            <h2>The Bad Manager Problem</h2>
+
+            <p>But here's where it gets interesting. Bad managers struggle with AI for the same reasons they struggle with people:</p>
+
+            <p><strong>They can't delegate effectively.</strong> They either micromanage the AI (spending more time prompt-engineering than just doing the work) or they abdicate entirely (accepting whatever the AI produces without critical evaluation).</p>
+
+            <p><strong>They can't communicate clearly.</strong> Vague instructions produce vague AI outputs. If you can't explain what you want to a human, you definitely can't explain it to a machine.</p>
+
+            <p><strong>They can't think strategically.</strong> They use AI for everything or nothing, without understanding when it adds value and when it wastes time.</p>
+
+            <p>In my corporate training sessions, I watch this play out in real-time. The managers who excel with AI are the same ones who excel with their teams. The ones who struggle? Usually the same ones their teams complain about.</p>
+
+            <h2>Why This Actually Matters</h2>
+
+            <p>This isn't just an academic observation. It has real implications for your career and your organization:</p>
+
+            <p><strong>First, AI makes management more important, not less.</strong> As routine cognitive tasks get automated, the human skills—judgment, creativity, empathy, strategic thinking—become more valuable. Organizations need managers who can orchestrate humans and AI together.</p>
+
+            <p><strong>Second, AI exposes organizational dysfunction faster.</strong> Bad processes, unclear goals, and poor communication don't just slow down humans anymore—they also create expensive AI failures. Companies that succeed with AI typically have better management practices overall.</p>
+
+            <p><strong>Third, improving your management skills is the best AI preparation.</strong> Forget learning every new AI tool. Instead, focus on delegation, communication, and strategic thinking. These skills transfer across any technology.</p>
+
+            <h2>What Good Managers Do Differently</h2>
+
+            <p>In my training sessions with companies like Kroger, Deloitte, and others, I've noticed three things that separate successful AI adopters:</p>
+
+            <p><strong>1. They start with the problem, not the tool.</strong> They don't ask "How can I use AI?" They ask "What problem am I solving?" and then evaluate if AI is the right solution.</p>
+
+            <p><strong>2. They treat AI like a junior team member.</strong> They give clear instructions, provide context, check the work, and iterate. They don't expect perfection but they don't accept mediocrity either.</p>
+
+            <p><strong>3. They focus on increasing job satisfaction, not just efficiency.</strong> The best managers I've trained use AI to eliminate drudgery so their teams can focus on meaningful work. That's a management philosophy, not a technology strategy.</p>
+
+            <h2>The Bottom Line</h2>
+
+            <p>AI isn't coming for good managers' jobs. It's making those jobs more important.</p>
+
+            <p>But if you're a bad manager—someone who can't delegate, can't communicate clearly, can't think strategically—AI will expose those weaknesses faster than any performance review ever could.</p>
+
+            <p>The good news? The skills you need to thrive with AI are the same skills you need to be a better manager today. Start there.</p>
+
+            <p>Want to master AI adoption for your team? That's exactly what I teach at the Xavier Leadership Center—where 96% of participants say they'll implement what they learned. <a href="mailto:humphreyj5@xavier.edu" style="color: #667eea; text-decoration: underline;">Let's talk.</a></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="author-section">
+            <h3>About the Author</h3>
+            <p><strong>Jarrod Humphrey</strong> (aka doctorhump) is an Assistant Professor at Xavier University where he teaches Managing AI & Emerging Technology. He's trained executives at 15+ organizations including Fifth Third Bank, GE Credit Union, and Kroger, achieving an 87% Net Promoter Score. He created D'Artagnan—the world's first ethical AI chatbot for college students.</p>
+            <div class="author-links">
+                <a href="../ai.html" class="author-link">View AI Leadership →</a>
+                <a href="https://www.linkedin.com/in/jarrodhumphrey/" target="_blank" class="author-link">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
