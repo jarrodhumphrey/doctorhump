@@ -65,6 +65,13 @@ The transcript in the modal should ONLY include:
 - Format as alternating Human/Assistant messages
 - Use proper HTML structure with `.message.human` and `.message.assistant` classes
 
+**CRITICAL TRANSCRIPT RULES:**
+- **ALWAYS include Jarrod's exact dictation verbatim** - never paraphrase, never summarize
+- **ONLY paraphrase Claude's messages to save length** - and ONLY when including full blog draft text
+- When paraphrasing drafts, include a note like: "[First draft of blog post provided]" or "[Revised draft with changes]"
+- **Include FULL drafts in the transcript** - show every version of the blog post text so readers can see the evolution
+- Ground truth is sacred - capture the actual conversation as closely as possible
+
 ## Important Notes
 
 - Capture everything from `/blog` forward for the transcript - this is the transparency promise
