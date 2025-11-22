@@ -1,0 +1,12 @@
+# Excel roster files
+Feedback/**/*.xlsx
+
+# PDF survey results
+Feedback/04-Survey-Results/*.pdf
+
+# Temporary files
+nul
+*.tif
+
+# Claude local settings
+.claude/settings.local.json
